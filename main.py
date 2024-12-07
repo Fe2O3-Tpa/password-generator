@@ -1,3 +1,4 @@
+# coding= utf-8
 import secrets
 
 def yes_or_no(query):
