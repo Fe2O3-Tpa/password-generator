@@ -1,7 +1,6 @@
 import secrets
 import string
 import pyperclip
-from typing import Union
 
 def yes_or_no(query:str):
     while True:
@@ -61,7 +60,7 @@ class Generator:
         if symbol:x+=str(strings.SYMBOL)
         return x 
     
-    def OptionUpdate(type:Options, content:Union[bool,int]):
+    def OptionUpdate(type:Options, content:bool|int):
         match type:
             case Options.Uppercase:
                 Options.Uppercase=content

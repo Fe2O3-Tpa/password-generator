@@ -59,6 +59,24 @@ class Generator:
         if digits: x+=str(strings.DIGITS)
         if symbol: x+=str(strings.SYMBOL)
         return x # 大文字・小文字・数字・記号をTrueのものだけ取り出しそれを返す
+    
+    def OptionUpdate(type:Options, content:bool|int):
+        match type:
+            case Options.Uppercase: # もしtypeがOptions..Uppercaseならば
+                Options.Uppercase=content
+                return
+            case Options.Lowercase:
+                Options.Lowercase=content
+                return
+            case Options.digits:
+                Options.digits=content
+                return
+            case Options.symbol:
+                Options.symbol=content
+                return
+            case Options.length:
+                Options.length=content
+                return
 
 if __name__=="__main__": # importされていないなら
     Generator.question() # 聞く
